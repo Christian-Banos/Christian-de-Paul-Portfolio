@@ -1,11 +1,8 @@
 .layout {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr;
-  grid:
-    "sidebar" auto
-    "main" 1fr
-    / auto;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "sidebar main";
   gap: 8px;
 }
 
@@ -64,26 +61,39 @@
     right: 1.5rem;
   }
 
+  /* Show menu */
   & .show-menu {
     top: 0;
   }
 }
 
-/* Show menu */
-
+/* main section */
 .main {
   grid-area: main;
-  background-color: yellow;
+  margin-left: 110px;
 }
 
 /* Mobile (1150px) */
 @media (max-width: 1150px) {
+
+  .layout {
+    grid-template-columns: 1fr; /* Una sola columna en móvil */
+    grid-template-areas: 
+    "sidebar"
+    "main";
+  }
+
+  .main {
+    margin-left: 0; /* Quitamos el margen en móvil */
+  }
+
+
   .nav__menu {
     position: fixed;
     top: -120%;
     left: 0;
     background-color: var(--secondary-color);
-    box-shadow: 0 8px 16px hsla(216, 24%, 8%, 0.2);
+    /* box-shadow: 0 8px 16px hsla(216, 24%, 8%, 0.2); */
     width: 100%;
     padding-block: 4rem;
     z-index: var(--z-fixed);
@@ -100,60 +110,90 @@
 
 /* For large devices */
 @media screen and (min-width: 1150px) {
-    .layout {
-      grid:
-        "sidebar main" 1fr
-        / auto 1fr;
-    }
-  
-    .sidebar {
-      position: sticky;
-      width: 110px;
-      height: 100vh;
-    }
-  
-    .container {
+  .layout {
+    grid-template-columns: auto 1fr; /* Mantenemos las dos columnas en desktop */
+    grid-template-areas: "sidebar main";
+  }
+
+  .sidebar {
+    position: fixed;
+    width: 8rem;
+    height: 100vh;
+  }
+
+  /*     .container {
       margin-inline: auto;
+    } */
+
+  .sidebar .nav {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    & img {
+      background-color: var(--first-color);
+      min-width: 8rem;
+      min-height: 8.43rem;
+      transition: all 0.4s ease ;
     }
-  
-    .sidebar .nav {
-      height: calc(var(--header-height) + 2rem);
-      flex-direction: column;
-      padding: 2rem 0;
-    }
-  
-    .sidebar .nav__toggle,
-    .sidebar .nav__close {
-      display: none !important;
-    }
-  
-    .sidebar .nav__menu {
-      position: static;
-      background-color: transparent;
-      padding: 0;
-      box-shadow: none;
-      width: auto;
-    }
-  
-    .sidebar .nav__list {
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 2rem;
-      padding: 0;
-      margin: 0;
-    }
-  
-    .sidebar .nav__link {
-      color: var(--white-color);
-      font-size: 1rem;
-      font-weight: var(--font-semibold);
-      transition: color 0.4s;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-    }
-  
-    .sidebar .nav__link:hover {
-      color: var(--hover-color);
+    
+    & img:hover {
+      background-color: var(--secondary-color); 
     }
   }
+
+  .sidebar .nav__toggle,
+  .sidebar .nav__close {
+    display: none;
+  }
+
+  .sidebar .nav__menu {
+    position: static;
+    height: calc(100vh - var(--header-height));
+    flex-direction: column;
+    background-color: transparent;
+    justify-content: center;
+    padding: 0;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3); /* Sombra suave a la derecha */
+    min-width: 8rem;
+  }
+
+  .sidebar .nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0; /* Eliminamos el gap */
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .sidebar .nav__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    font-size: 1rem;
+    font-weight: var(--font-semibold);
+    border: 1px solid black;
+    width: 8rem;
+    height: 6.3rem;
+    transition: color 0.4s;
+  }
+
+  .sidebar .nav__link.active {
+    background-color: var(--first-color); /* Color de fondo cuando está activo */
+    color: var(--hover-color); /* Color del texto cuando está activo */
+  }
+
+  .sidebar .nav__link:hover {
+    background-color: var(--first-color);
+    color: var(--hover-color);
+  }
+
+  /* main */
+  .main{
+    background-color: rebeccapurple;
+    margin-left: 120px;
+  }
+
+}
