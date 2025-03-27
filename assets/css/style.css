@@ -5,14 +5,13 @@
 :root {
   --header-height: 3.5rem;
   /* ===== Colors =====*/
-  --first-color: #15181b;
-  --secondary-color: #2f3941;
+  --first-color: #0f1113;
+  --secondary-color: #222222;
   --white-color: #eeeeee;
   --hover-color: #ea9215;
   --text-color: #eeeeee;
 
   /* ===== Font and typography =====*/
-  --body-font: "Poppins", sans-serif;
   --body-font: "Poppins", sans-serif;
   --biggest-font-size: 3rem;
   --bigger-font-size: 2.25rem;

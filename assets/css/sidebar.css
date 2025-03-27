@@ -2,7 +2,9 @@
   width: 100%;
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-areas: "sidebar main";
+  grid-template-areas:
+    "sidebar"
+    "main";
   gap: 8px;
 }
 
@@ -50,6 +52,7 @@
     color: var(--white-color);
     font-weight: var(--font-semibold);
     transition: color 0.4s;
+    font-size: var(--big-font-size);
   }
   & .nav__link:hover {
     color: var(--hover-color);
@@ -71,22 +74,50 @@
 .main {
   grid-area: main;
   margin-left: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & .header {
+    font-size: var(--bigger-font-size);
+    text-align: center;
+    margin: 1rem;
+    font-family: "Poppins", sans-serif;
+    min-width: 150px;
+  }
+
+  & p {
+    font-family: var(--body-font);
+    font-size: var(--big-font-size);
+    margin: 1rem;
+  }
+
+  & img {
+    max-width: 15rem;
+    display: block;
+    width: 300px;
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(62, 62, 62, 0.8));
+    opacity: 0.8;
+  }
 }
 
 /* Mobile (1150px) */
 @media (max-width: 1150px) {
-
   .layout {
     grid-template-columns: 1fr; /* Una sola columna en móvil */
-    grid-template-areas: 
-    "sidebar"
-    "main";
+    grid-template-areas:
+      "sidebar"
+      "main";
   }
 
   .main {
     margin-left: 0; /* Quitamos el margen en móvil */
+    margin-top: var(
+      --header-height
+    ); /* Asegura que no quede debajo del sidebar */
   }
-
 
   .nav__menu {
     position: fixed;
@@ -134,11 +165,11 @@
       background-color: var(--first-color);
       min-width: 8rem;
       min-height: 8.43rem;
-      transition: all 0.4s ease ;
+      transition: all 0.4s ease;
     }
-    
+
     & img:hover {
-      background-color: var(--secondary-color); 
+      background-color: var(--secondary-color);
     }
   }
 
@@ -174,14 +205,15 @@
     color: var(--white-color);
     font-size: 1rem;
     font-weight: var(--font-semibold);
-    border: 1px solid black;
     width: 8rem;
     height: 6.3rem;
     transition: color 0.4s;
   }
 
   .sidebar .nav__link.active {
-    background-color: var(--first-color); /* Color de fondo cuando está activo */
+    background-color: var(
+      --first-color
+    ); /* Color de fondo cuando está activo */
     color: var(--hover-color); /* Color del texto cuando está activo */
   }
 
@@ -191,9 +223,8 @@
   }
 
   /* main */
-  .main{
+  .main {
     background-color: rebeccapurple;
     margin-left: 120px;
   }
-
 }
