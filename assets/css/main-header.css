@@ -1,0 +1,44 @@
+.main__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & .header {
+    font-size: var(--bigger-font-size);
+    text-align: center;
+    margin: 1rem;
+    font-family: "Poppins", sans-serif;
+    min-width: 150px;
+  }
+
+  & p {
+    font-family: var(--body-font);
+    font-size: var(--big-font-size);
+    margin-bottom: 2rem;
+  }
+
+  & img {
+    width: 100%; /* La imagen se ajusta al ancho de su contenedor */
+    max-width: 70%; /* Evita que se haga más grande que su contenedor */
+    position: relative;
+    display: inline-block;
+    height: auto;
+    filter: brightness(0.7) drop-shadow(0 0 15px rgba(62, 62, 62, 0.8)); /* Agregamos brightness */
+    opacity: 0.8;
+  }
+}
+
+/* Para tablet */
+@media screen and (min-width: 618px) and (max-width: 1149px) {
+  .main__content img {
+    max-width: 55%; /* Tamaño intermedio para tablet */
+  }
+}
+
+/* Para desktop */
+@media screen and (min-width: 1150px) {
+  .main__content img {
+    max-width: 40%; /* Reducimos el tamaño en desktop */
+  }
+}

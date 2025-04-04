@@ -73,34 +73,7 @@
 /* main section */
 .main {
   grid-area: main;
-  margin-left: 110px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  & .header {
-    font-size: var(--bigger-font-size);
-    text-align: center;
-    margin: 1rem;
-    font-family: "Poppins", sans-serif;
-    min-width: 150px;
-  }
-
-  & p {
-    font-family: var(--body-font);
-    font-size: var(--big-font-size);
-    margin: 1rem;
-  }
-
-  & img {
-    max-width: 15rem;
-    display: block;
-    width: 300px;
-    height: auto;
-    filter: drop-shadow(0 0 15px rgba(62, 62, 62, 0.8));
-    opacity: 0.8;
-  }
+  margin-left: 110px;  
 }
 
 /* Mobile (1150px) */
