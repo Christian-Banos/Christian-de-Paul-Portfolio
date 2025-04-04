@@ -14,7 +14,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  background-color: var(--secondary-color);
+  background-color: rgba(37, 42, 47, 0.7); 
   z-index: var(--z-fixed);
 
   & .nav {
@@ -73,7 +73,9 @@
 /* main section */
 .main {
   grid-area: main;
-  margin-left: 110px;  
+  margin-left: 110px;
+  display: flex;
+  flex-direction: column;  
 }
 
 /* Mobile (1150px) */
@@ -96,8 +98,8 @@
     position: fixed;
     top: -120%;
     left: 0;
-    background-color: var(--secondary-color);
-    /* box-shadow: 0 8px 16px hsla(216, 24%, 8%, 0.2); */
+    background-color: rgba(37, 42, 47, 0.9); 
+    box-shadow: 0 8px 16px hsla(216, 24%, 8%, 0.2); 
     width: 100%;
     padding-block: 4rem;
     z-index: var(--z-fixed);

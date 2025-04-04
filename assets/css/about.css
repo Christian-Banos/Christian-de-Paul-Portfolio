@@ -1,0 +1,27 @@
+.about{
+    text-align: center;
+    margin: 1rem;
+
+    & .about__title{
+        font-size: var(--big-font-size);
+        margin-bottom: 1rem;
+        margin-top: 5rem;
+    }
+
+    & .about__line{
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
+    & .about__text{
+        margin-top: 1rem;
+        line-height: 1.6;         /* Mejora el espaciado entre líneas */
+        max-width: 100ch;          /* Limita el ancho para mejor legibilidad */
+        margin-left: auto;        /* Centra el bloque de texto */
+        margin-right: auto;
+        padding: 0 1rem;          /* Añade espacio en los laterales */
+        color: var(--text-color); /* Usa la variable de color si está definida */
+        text-align: justify;
+    }
+    
+}
