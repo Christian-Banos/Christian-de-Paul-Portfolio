@@ -6,6 +6,7 @@
         font-size: var(--big-font-size);
         margin-bottom: 1rem;
         margin-top: 5rem;
+        font-weight: var(--font-regular);
     }
 
     & .about__line{
