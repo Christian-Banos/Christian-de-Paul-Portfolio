@@ -8,14 +8,17 @@
     font-size: var(--bigger-font-size);
     text-align: center;
     margin: 1rem;
-    font-family: "Poppins", sans-serif;
     min-width: 150px;
+
+    & h1{
+      font-weight: var(--font-semibold);
+    }
   }
 
   & p {
-    font-family: var(--body-font);
     font-size: var(--big-font-size);
     margin-bottom: 2rem;
+    font-weight: var(--font-medium);
   }
 
   & img {
@@ -24,8 +27,9 @@
     position: relative;
     display: inline-block;
     height: auto;
-    filter: brightness(0.7) drop-shadow(0 0 15px rgba(62, 62, 62, 0.8)); /* Agregamos brightness */
+    filter: brightness(0.8) drop-shadow(0 0 10px var(--hover-color)); /* Agregamos brightness */
     opacity: 0.8;
+    margin-top: 2rem;
   }
 }
 

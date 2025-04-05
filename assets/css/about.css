@@ -6,12 +6,15 @@
         font-size: var(--big-font-size);
         margin-bottom: 1rem;
         margin-top: 5rem;
-        font-weight: var(--font-regular);
+        font-weight: var(--font-medium);
     }
 
     & .about__line{
-        max-width: 50%;
+        max-width: 60%;
         margin: 0 auto;
+        border: none;
+        height: 1px;
+        background: linear-gradient(to right, transparent, var(--hover-color), transparent);
     }
 
     & .about__text{
