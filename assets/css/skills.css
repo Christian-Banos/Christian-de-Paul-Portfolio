@@ -58,6 +58,10 @@
   color: var(--hover-color);
 }
 
+svg{
+  fill: var(--hover-color);
+}
+
 /* hover */
 .card__skills:hover {
     filter: brightness(1.8); /* 1.0 es normal, >1 es más claro */
