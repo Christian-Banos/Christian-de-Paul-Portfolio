@@ -1,0 +1,26 @@
+.resume {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  margin-left: auto; /* Centra el bloque de texto */
+  margin-right: auto;
+  margin: 2rem;
+
+  & a {
+    color: var(--white-color);
+    min-width: 10rem;
+    text-align: center;
+    background-color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--hover-color);
+    border-radius: 0.4rem;
+    transition: box-shadow 0.5s ease, transform 0.1s ease;
+  }
+
+  & a:hover {
+    background-color: var(--hover-color);
+    border: 1px solid var(--secondary-color);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+}
