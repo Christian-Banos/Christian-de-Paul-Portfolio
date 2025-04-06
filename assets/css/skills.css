@@ -6,6 +6,34 @@
   margin-right: auto;
   padding: 0 1rem;
 
+  & .skills__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    & .skills__title {
+      font-size: var(--big-font-size);
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+      font-weight: var(--font-medium);
+    }
+
+    & .skills__line {
+      min-width: 60%;
+      margin: 1rem auto;
+      border: none;
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        transparent,
+        var(--hover-color),
+        transparent
+      );
+    }
+  }
+
   & .card__skills {
     border: 1px solid #373535;
     background-color: var(--secondary-color);
@@ -27,10 +55,6 @@
         font-weight: var(--font-semibold);
       }
     }
-
-    /* & .card__text{
-        margin-bottom: 0.9rem;
-    } */
 
     & .card__tecnologies {
       margin-top: 0.9rem;
@@ -58,11 +82,11 @@
   color: var(--hover-color);
 }
 
-svg{
+svg {
   fill: var(--hover-color);
 }
 
 /* hover */
 .card__skills:hover {
-    filter: brightness(1.8); /* 1.0 es normal, >1 es más claro */
-  }
+  filter: brightness(1.8); /* 1.0 es normal, >1 es más claro */
+}

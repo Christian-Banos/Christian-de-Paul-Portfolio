@@ -1,0 +1,55 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-left: auto; /* Centra el bloque de texto */
+  margin-right: auto;
+  padding: 0 1rem;
+  background-color: red;
+  max-width: 43rem;
+
+  & .project__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    & .project-title {
+      font-size: var(--big-font-size);
+      margin: 1rem auto;
+      font-weight: var(--font-medium);
+    }
+
+    & .project-line {
+      min-width: 60%;
+      margin: 1rem auto;
+      border: none;
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        transparent,
+        var(--hover-color),
+        transparent
+      );
+    }
+  }
+
+  & .projects__container {
+    background-color: aqua;
+
+    & .projects__card {
+      border: 1px solid #373535;
+      background-color: var(--secondary-color);
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      opacity: 0.9;
+      transition: all 1s ease;
+    }
+  }
+}
+/* RESPONSIVE */
+/* Para pantallas de 768px o menos (tabletas) */
+

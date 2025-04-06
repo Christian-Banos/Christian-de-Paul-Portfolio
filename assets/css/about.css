@@ -1,7 +1,6 @@
 .about{
     text-align: center;
     margin: 1rem;
-    margin-bottom: 2rem;
 
     & .about__title{
         font-size: var(--big-font-size);

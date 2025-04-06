@@ -4,6 +4,7 @@
 @import url(about.css);
 @import url(skills.css);
 @import url(resume.css);
+@import url(projects.css);
 /* ===== Variables CSS ===== */
 :root {
   --header-height: 3.5rem;
