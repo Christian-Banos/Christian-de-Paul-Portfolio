@@ -6,6 +6,7 @@
 @import url(resume.css);
 @import url(projects.css);
 @import url(contact.css);
+@import url(footer.css);
 /* ===== Variables CSS ===== */
 :root {
   --header-height: 3.5rem;
