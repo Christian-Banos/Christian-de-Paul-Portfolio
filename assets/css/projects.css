@@ -5,7 +5,6 @@
   margin-left: auto; /* Centra el bloque de texto */
   margin-right: auto;
   padding: 0 1rem;
-  background-color: red;
   max-width: 43rem;
 
   & .project__header {
@@ -36,7 +35,15 @@
   }
 
   & .projects__container {
-    background-color: aqua;
+
+    & .projects__img{
+      filter: blur(0.2rem);
+      transition: all 5s ease;
+    }
+    & .projects__img:hover{
+      filter: blur(0);
+      filter: brightness(1.2);
+    }
 
     & .projects__card {
       border: 1px solid #373535;
@@ -44,12 +51,48 @@
       border-radius: 10px;
       padding: 1rem;
       margin-bottom: 1rem;
-      overflow: hidden;
       opacity: 0.9;
       transition: all 1s ease;
+
+      & .projects__modal {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+
+        & .projects__title {
+          font-size: var(--h2-font-size);
+          margin-bottom: 1rem;
+          font-weight: var(--font-medium);
+        }
+
+        & .projects__button {
+          margin-top: 1rem;
+          max-width: 10rem;
+          text-align: center;
+          background-color: var(--hover-color);
+          color: var(--white-color);
+          font-weight: var(--font-medium);
+          padding: 0.5rem;
+          border: 1px solid var(--hover-color);
+          border-radius: 0.4rem;
+          transition: box-shadow 0.5s ease, transform 0.2s ease;
+        }
+
+        & .projects__button:hover {
+          background-color: var(--hover-color);
+          border: 1px solid var(--secondary-color);
+          box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+          filter: brightness(1.2);
+        }
+      }
     }
+
+ /*    & .projects__card:hover{
+        filter: brightness(1.4);
+    } */
   }
 }
 /* RESPONSIVE */
 /* Para pantallas de 768px o menos (tabletas) */
+
 
