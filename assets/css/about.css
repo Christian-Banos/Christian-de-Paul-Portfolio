@@ -1,31 +1,86 @@
-.about{
-    text-align: center;
-    margin: 1rem;
+.about {
+  text-align: center;
+  margin: 1rem;
 
-    & .about__title{
-        font-size: var(--big-font-size);
-        margin-bottom: 1rem;
-        margin-top: 5rem;
-        font-weight: var(--font-medium);
-    }
+  & .about__title {
+    font-size: var(--big-font-size);
+    margin-bottom: 1rem;
+    margin-top: 5rem;
+    font-weight: var(--font-medium);
+  }
 
-    & .about__line{
-        max-width: 60%;
-        margin: 0 auto;
-        border: none;
-        height: 1px;
-        background: linear-gradient(to right, transparent, var(--hover-color), transparent);
-    }
+  & .about__line {
+    max-width: 60%;
+    margin: 0 auto;
+    border: none;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--hover-color),
+      transparent
+    );
+  }
 
-    & .about__text{
-        margin-top: 1rem;
-        line-height: 1.6;         /* Mejora el espaciado entre líneas */
-        max-width: 100ch;          /* Limita el ancho para mejor legibilidad */
-        margin-left: auto;        /* Centra el bloque de texto */
-        margin-right: auto;
-        padding: 0 1rem;          /* Añade espacio en los laterales */
-        color: var(--text-color); /* Usa la variable de color si está definida */
-        text-align: justify;
-    }
-    
+  & .about__text {
+    margin-top: 1rem;
+    line-height: 1.6; /* Mejora el espaciado entre líneas */
+    max-width: 100ch; /* Limita el ancho para mejor legibilidad */
+    margin-left: auto; /* Centra el bloque de texto */
+    margin-right: auto;
+    padding: 0 1rem; /* Añade espacio en los laterales */
+    color: var(--text-color); /* Usa la variable de color si está definida */
+    text-align: justify;
+  }
 }
+
+/* carrusel */
+.carousel-container {
+  overflow: hidden;
+  white-space: nowrap;
+  background: linear-gradient(
+      to right,
+      transparent,
+      var(--secondary-color),
+      transparent
+    );
+  flex-grow: 1;
+  margin-left: auto; /* Centra el bloque de texto */
+  margin-right: auto;
+  padding: 0 1rem;
+  width: 100%;
+  max-width: 25rem;
+  margin-top: 4rem;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.carousel-item {
+  /* display: inline-block; */
+  margin: 1rem;
+
+  & .color-icon{
+    font-size: 2.81rem;
+  }
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (min-width: 520px) {
+    .carousel-container{
+        min-width: 40rem;
+    }
+  }
+  

@@ -85,16 +85,16 @@
         transition: all 1s ease;
       }
 
-      & textarea:hover{
-        border: 1px solid var(--hover-color);  
+      & textarea:hover {
+        border: 1px solid var(--hover-color);
       }
 
       & textarea::placeholder {
-        position: absolute;
         top: 18px;
+        left: 18px;
       }
 
-      & textarea:focus{
+      & textarea:focus {
         border-color: var(--hover-color);
       }
     }

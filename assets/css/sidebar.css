@@ -14,9 +14,9 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: auto; 
+  height: auto;
   overflow-y: auto;
-  background-color: rgba(37, 42, 47, 0.7); 
+  background-color: rgba(37, 42, 47, 0.7);
   z-index: var(--z-fixed);
 
   & .nav {
@@ -72,7 +72,7 @@
   }
 }
 
-.sidebar::-webkit-scrollbar{
+.sidebar::-webkit-scrollbar {
   display: none;
 }
 
@@ -80,13 +80,12 @@
   scrollbar-width: none; /* Para Firefox */
 }
 
-
 /* main section */
 .main {
   grid-area: main;
   margin-left: 110px;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
 }
 
 /* Mobile (1150px) */
@@ -107,14 +106,16 @@
 
   .nav__menu {
     position: fixed;
-    top: -120%;
+    top: -211%;
     left: 0;
-    background-color: rgba(37, 42, 47, 0.9); 
-    box-shadow: 0 8px 16px hsla(216, 24%, 8%, 0.2); 
+    background-color: rgba(37, 42, 47, 0.9);
+    box-shadow: 0 8px 16px hsla(216, 24%, 8%, 0.2);
     width: 100%;
     padding-block: 4rem;
     z-index: var(--z-fixed);
     transition: top 1s;
+    height: 100vh; /* Añadido para ocupar toda la altura de la pantalla */
+    overflow-y: auto; /* Permitir scroll si el contenido es muy largo */
   }
 }
 
@@ -138,12 +139,8 @@
     height: 100vh;
   }
 
-  /*     .container {
-      margin-inline: auto;
-    } */
-
   .sidebar .nav {
-    height: 100vh;
+    height: 80vh;
     flex-direction: column;
     justify-content: flex-start;
 
