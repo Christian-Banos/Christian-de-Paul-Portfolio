@@ -11,9 +11,11 @@
 .sidebar {
   grid-area: sidebar;
   position: fixed;
-  width: 100%;
   top: 0;
   left: 0;
+  width: 100%;
+  height: auto; 
+  overflow-y: auto;
   background-color: rgba(37, 42, 47, 0.7); 
   z-index: var(--z-fixed);
 
@@ -69,6 +71,15 @@
     top: 0;
   }
 }
+
+.sidebar::-webkit-scrollbar{
+  display: none;
+}
+
+.sidebar {
+  scrollbar-width: none; /* Para Firefox */
+}
+
 
 /* main section */
 .main {

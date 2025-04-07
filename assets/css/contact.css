@@ -1,0 +1,107 @@
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-left: auto; /* Centra el bloque de texto */
+  margin-right: auto;
+  padding: 0 1rem;
+  width: 100%;
+  max-width: 43rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+
+  & .contact__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .contact__title {
+      font-size: var(--big-font-size);
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+      font-weight: var(--font-medium);
+    }
+  }
+
+  & .contact__line {
+    min-width: 60%;
+    margin: 1rem auto;
+    border: none;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--hover-color),
+      transparent
+    );
+  }
+
+  & .contact__form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    min-width: 17rem;
+    max-width: 32.5rem;
+
+    & form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      & input {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        background-color: var(--secondary-color);
+        opacity: 0.7;
+        transition: all 1s ease;
+      }
+
+      & input:hover{
+        border: 1px solid var(--hover-color);
+      }
+
+      & input:focus{
+        border-color: var(--hover-color);        
+       }
+
+      & input[type="text"] {
+        width: 100%;            
+        padding: 1rem;         
+        height: 10rem;
+       }
+
+       & input[type="text"]::placeholder{
+        position: absolute; 
+        top: 10px;           
+        left: 10px;        
+       }
+
+    }
+  }
+
+  & .contact__button{
+    width: 100%;
+    min-width: 17rem;
+    max-width: 32.5rem;
+    border-radius: 6px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: var(--secondary-color);
+    border: 1px solid #ccc;
+    color: var(--white-color);
+    cursor: pointer;
+    background-color: var(--hover-color);
+    transition: all .5s ease;
+  }
+
+  & .contact__button:hover{
+    opacity: 0.8;
+  }
+}

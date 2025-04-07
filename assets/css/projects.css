@@ -38,8 +38,9 @@
 
     & .projects__img{
       filter: blur(0.2rem);
-      transition: all 5s ease;
+      transition: all 1s ease;
     }
+
     & .projects__img:hover{
       filter: blur(0);
       filter: brightness(1.2);
@@ -75,24 +76,18 @@
           padding: 0.5rem;
           border: 1px solid var(--hover-color);
           border-radius: 0.4rem;
-          transition: box-shadow 0.5s ease, transform 0.2s ease;
+          transition: all 1s ease
         }
 
         & .projects__button:hover {
           background-color: var(--hover-color);
           border: 1px solid var(--secondary-color);
           box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
-          filter: brightness(1.2);
+          opacity: 0.8;
         }
       }
     }
 
- /*    & .projects__card:hover{
-        filter: brightness(1.4);
-    } */
   }
 }
-/* RESPONSIVE */
-/* Para pantallas de 768px o menos (tabletas) */
-
 
