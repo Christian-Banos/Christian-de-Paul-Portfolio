@@ -59,9 +59,8 @@
   padding: 0;
   box-sizing: border-box;
   scrollbar-width: thin;
-  scrollbar-color: var(--color-neutral-700) var(--color-neutral-900);
+  scrollbar-color: var(--hover-color) var(--secondary-color);
 }
-
 
 html {
   scroll-behavior: smooth;

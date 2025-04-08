@@ -65,6 +65,10 @@
 
 /* navigation for mobile devices */
 @media screen and (max-width: 1024px) {
+  .sidebar{
+    width: 99%;
+  }
+
   .nav__menu {
     position: fixed;
     top: 0;
@@ -125,6 +129,7 @@
 
 /* Mobile (1150px) */
 @media (max-width: 1150px) {
+
   .layout {
     grid-template-columns: 1fr; /* Una sola columna en móvil */
     grid-template-areas:
