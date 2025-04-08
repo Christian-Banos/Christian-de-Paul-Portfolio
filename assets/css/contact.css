@@ -83,16 +83,18 @@
         color: var(--white-color);
         opacity: 0.7;
         transition: all 1s ease;
+        display: relative;
       }
 
       & textarea:hover {
         border: 1px solid var(--hover-color);
       }
 
-      & textarea::placeholder {
+      /* & textarea::placeholder {
+        display: absolute;
         top: 18px;
         left: 18px;
-      }
+      } */
 
       & textarea:focus {
         border-color: var(--hover-color);

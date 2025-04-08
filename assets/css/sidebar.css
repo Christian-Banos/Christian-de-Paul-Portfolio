@@ -11,21 +11,17 @@
 .sidebar {
   grid-area: sidebar;
   position: fixed;
+  width: 100%;
+  background-color: var(--secondary-color);
   top: 0;
   left: 0;
-  width: 100%;
-  height: auto;
-  overflow-y: auto;
-  background-color: rgba(37, 42, 47, 0.7);
   z-index: var(--z-fixed);
 
   & .nav {
-    position: relative;
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--white-color);
   }
 
   & img {
@@ -65,12 +61,51 @@
     top: 1rem;
     right: 1.5rem;
   }
+}
 
-  /* Show menu */
-  & .show-menu {
+/* navigation for mobile devices */
+@media screen and (max-width: 1024px) {
+  .nav__menu {
+    position: fixed;
     top: 0;
+    right: -100%;
+    background-color: hsla(0, 0%, 10%, 0.3);
+    width: 75%;
+    height: 100%;
+    padding: 4.5rem 0 0 3rem;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px); /* For Safari  */
+    transition: right 0.3s;
   }
 }
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+
+.nav__link {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  transition: color 0.4s;
+}
+
+.nav__link:hover {
+  color: var(--hover-color);
+}
+
+.nav__close {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+}
+/* show menu */
+.show-menu {
+  right: 0;
+}
+
+/* Add blur to header */
 
 .sidebar::-webkit-scrollbar {
   display: none;
@@ -104,18 +139,8 @@
     ); /* Asegura que no quede debajo del sidebar */
   }
 
-  .nav__menu {
-    position: fixed;
-    top: -211%;
-    left: 0;
-    background-color: rgba(37, 42, 47, 0.9);
-    box-shadow: 0 8px 16px hsla(216, 24%, 8%, 0.2);
-    width: 100%;
-    padding-block: 4rem;
-    z-index: var(--z-fixed);
-    transition: top 1s;
-    height: 100vh; /* Añadido para ocupar toda la altura de la pantalla */
-    overflow-y: auto; /* Permitir scroll si el contenido es muy largo */
+  .nav__menu.show-menu {
+    transform: translateY(0); /* Muestra el menú */
   }
 }
 
@@ -137,18 +162,29 @@
     position: fixed;
     width: 8rem;
     height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(37, 42, 47, 0.7); /* Fondo transparente */
+    z-index: var(--z-fixed);
+    background-color: aqua;
   }
 
   .sidebar .nav {
-    height: 80vh;
+    height: 100vh;
+    width: 100%;    
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
+    background-color: var(--secondary-color);
+    margin: 0;
 
     & img {
       background-color: var(--first-color);
-      min-width: 8rem;
-      min-height: 8.43rem;
+      width: 100%;
+      max-width: 8rem;
+      object-fit: fill;
       transition: all 0.4s ease;
+      margin: 0;
     }
 
     & img:hover {
@@ -190,7 +226,7 @@
     font-weight: var(--font-semibold);
     width: 8rem;
     height: 6.3rem;
-    transition: color 0.4s;
+    transition: all 1s ease;
   }
 
   .sidebar .nav__link.active {
@@ -209,5 +245,34 @@
   .main {
     /* background-color: rebeccapurple; */
     margin-left: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+  }
+
+  .nav__actions {
+    display: block; /* Muestra el toggle button en dispositivos móviles */
+  }
+
+  .nav__toggle {
+    font-size: 36px;
+  }
+
+  @media (orientation: landscape) {
+    .sidebar {
+      width: 100%; /* Reduce el ancho del sidebar en modo horizontal */
+    }
+
+    .nav__menu {
+      flex-direction: row; /* Muestra las opciones en fila si la orientación es horizontal */
+    }
+
+    .nav__link {
+      padding: 10px;
+      font-size: 16px;
+    }
   }
 }
