@@ -91,3 +91,11 @@
   }
 }
 
+
+
+
+@media (min-width: 320px) and (max-width: 460px) {
+  .projects{
+    margin-right: 0.7rem;
+  }
+}

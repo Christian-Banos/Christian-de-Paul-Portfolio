@@ -128,3 +128,12 @@
     transform: translateY(1px);
   }
 }
+
+@media (min-width: 315px) and (max-width: 460px) {
+  .contact {
+    & form {
+      margin: 0 auto;
+      min-width: 22rem;
+    }
+  }
+}

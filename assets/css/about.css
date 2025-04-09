@@ -84,3 +84,19 @@
     }
   }
   
+/* For samll devices */
+@media (min-width: 320px) and (max-width: 460px) {
+  .about{
+    margin-left: auto; /* Centra el bloque de texto */
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+
+    & .about__text{
+      border: 1px solid var(--secondary-color);
+      max-width: 25rem;
+      padding-right: 2rem;
+    }
+  }
+  
+}

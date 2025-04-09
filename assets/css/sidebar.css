@@ -159,8 +159,12 @@
 }
 
 /* For samll devices */
-@media (max-width: 320px) {
-
+@media (min-width: 320px) and (max-width: 460px) {
+  .main__content{
+    width: 100%;
+    max-width: 25rem;
+  }
+  
   .container {
     margin-inline: 1rem;
   }
