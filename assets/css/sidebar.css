@@ -63,6 +63,7 @@
   }
 }
 
+
 /* navigation for mobile devices */
 @media screen and (max-width: 1024px) {
   .sidebar{
@@ -110,13 +111,21 @@
 }
 
 /* Add blur to header */
-
-.sidebar::-webkit-scrollbar {
-  display: none;
+.blur-header {
+  background-color: transparent;
 }
 
-.sidebar {
-  scrollbar-width: none; /* Para Firefox */
+.blur-header::after {
+  content: "";
+  position: absolute;
+  width: 1000%;
+  height: 100%;
+  background-color: hsla(0, 0%, 10%, 0.3);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px); /* For Safari  */
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 /* main section */

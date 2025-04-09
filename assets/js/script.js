@@ -50,7 +50,21 @@ function scrollActive() {
 }
 
 // Activar la función cuando se hace scroll
-window.addEventListener("scroll", scrollActive);
+document.addEventListener('DOMContentLoaded', () => {
+    const sidebar = document.getElementById('sidebar');
+
+    // Función que agrega o elimina la clase de desenfoque
+    function blurSidebar() {
+        if (window.scrollY >= 50) {
+            sidebar.classList.add('blur-sidebar'); // Agrega la clase para desenfoque
+        } else {
+            sidebar.classList.remove('blur-sidebar'); // Elimina la clase de desenfoque
+        }
+    }
+
+    // Evento de scroll
+    window.addEventListener('scroll', blurSidebar);
+});
 
 // Para activar el link cuando se hace click
 const navLinks = document.querySelectorAll(".nav__link");
