@@ -85,7 +85,7 @@
   }
   
 /* For samll devices */
-@media (min-width: 320px) and (max-width: 460px) {
+@media (min-width: 320px) and (max-width: 360px) {
   .about{
     margin-left: auto; /* Centra el bloque de texto */
     margin-right: auto;

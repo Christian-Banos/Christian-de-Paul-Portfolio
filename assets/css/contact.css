@@ -129,7 +129,7 @@
   }
 }
 
-@media (min-width: 315px) and (max-width: 460px) {
+@media (min-width: 315px) and (max-width: 330px) {
   .contact {
     & form {
       margin: 0 auto;

@@ -94,7 +94,7 @@
 
 
 
-@media (min-width: 320px) and (max-width: 460px) {
+@media (min-width: 320px) and (max-width: 360px) {
   .projects{
     margin-right: 0.7rem;
   }
