@@ -30,7 +30,7 @@ Este es mi portafolio como desarrollador web, creado con HTML, CSS y JavaScript.
 
 ## 📬 Contacto
 
-Podés contactarme a través de [tuemail@example.com] o [LinkedIn/TuRed].
+Podés contactarme a través de [mail](christiandepaulbp@gmail.com) o [LinkedIn christianbanos](https://www.linkedin.com/in/christianbanos/).
 
 ---
 
