@@ -160,6 +160,7 @@
 
 /* For samll devices */
 @media (max-width: 320px) {
+
   .container {
     margin-inline: 1rem;
   }

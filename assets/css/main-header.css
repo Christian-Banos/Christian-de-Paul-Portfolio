@@ -27,6 +27,8 @@
     position: relative;
     display: inline-block;
     height: auto;
+    min-height: 200px; /* Altura mínima para SVG */
+    object-fit: contain; /* Mantiene la proporción */
     filter: brightness(0.8) drop-shadow(0 0 10px var(--hover-color)); /* Agregamos brightness */
     opacity: 0.8;
     margin-top: 2rem;
